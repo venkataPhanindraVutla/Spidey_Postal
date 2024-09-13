@@ -4,11 +4,11 @@
    <script>
        var options = {
            "key": "{{ settings.RAZORPAY_API_KEY }}",
-           "amount": "{{ amount }}",
+           "amount": "{{ order.stamp.price }}",
            "currency": "INR",
-           "name": "Your Company Name",
-           "description": "Payment Description",
-           "order_id": "{{ order_id }}",
+           "name": "{{ order }}",
+           "description": "{{ order.stamp.description }}",
+           "order_id": "{{ order.provider_order_id }}",
            "handler": function(response) {
                // Handle the payment success response
                // You can submit the form or redirect to a success page

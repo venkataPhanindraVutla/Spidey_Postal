@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Stamp, Order
+from .models import Stamp
 
 # Create your views here.
 

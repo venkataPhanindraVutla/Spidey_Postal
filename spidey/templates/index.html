@@ -10,9 +10,9 @@
   <!-- 
     - primary meta tags
   -->
-  <title>Booken - Get Your New Book Collections</title>
-  <meta name="title" content="Booken - Get Your New Book Collections">
-  <meta name="description" content="This is a Book eCommerce html template made by codewithsadee">
+  <title>SIH1762</title>
+  {% comment %} <meta name="title" content="Booken - Get Your New Book Collections"> {% endcomment %}
+  {% comment %} <meta name="description" content="This is a Book eCommerce html template made by codewithsadee"> {% endcomment %}
 
   <!-- 
     - favicon
@@ -106,10 +106,6 @@
             </li>
 
             <li>
-              <a href="#" class="navbar-link">Blog</a>
-            </li>
-
-            <li>
               <a href="#" class="navbar-link">Shop</a>
             </li>
 
@@ -128,7 +124,7 @@
         <a href="tel:+0123456789" class="header-contact-link">
           <ion-icon name="headset-outline" aria-hidden="true"></ion-icon>
 
-          <span class="span">(+01)-234-56789</span>
+          <span class="span">9291382910</span>
         </a>
 
       </div>
@@ -296,7 +292,7 @@
               <div class="product-card">
 
                 {% comment %} <span class="card-badge">New</span> {% endcomment %}
-                <a href="{% url 'buy' stamp.id %}">
+                <a href="{% url 'payment' stamp.id %}">
                 <div class="card-banner img-holder" style="--width: 384; --height: 480;">
                   <img src={{ stamp.image_url }} width="384" height="480" loading="lazy" 
                     class="img-cover">
@@ -405,7 +401,7 @@
               <div class="product-card">
 
                 {% comment %} <span class="card-badge">New</span> {% endcomment %}
-
+                <a href="{% url 'payment' stamp.id %}">
                 <div class="card-banner img-holder" style="--width: 384; --height: 480;">
                   <img src={{ stamp.image_url }} width="384" height="470" loading="lazy" 
                     class="img-cover">
@@ -418,6 +414,7 @@
 
                   </div>
                 </div>
+              </a>
 
                 <div class="card-content">
 

@@ -1,14 +1,20 @@
 from django.shortcuts import render
 from .razorpay_integration import initiate_payment,client
 import razorpay
+from .models import Order
+from base.models import Stamp
 
-def payment_view(request,amount = 69):
-   order_id = initiate_payment(amount)
+
+def payment_view(request, pk):
+   # Set the amount dynamically or based on your requirements
+   stamp = Stamp.objects.get(pk=pk)
+   order_id = initiate_payment(int(stamp.price))
+   order = Order.objects.create(stamp=stamp, provider_order_id=order_id)
    context = {
-       'order_id': order_id,
-       'amount': amount
+       'order': order
    }
    return render(request, 'payment.html', context)
+
 
 def payment_success_view(request):
    order_id = request.POST.get('order_id')
