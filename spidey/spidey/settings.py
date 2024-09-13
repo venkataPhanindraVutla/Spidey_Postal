@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -130,3 +130,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 RAZORPAY_API_KEY = 'rzp_test_l1HBtyvaOtuRLM'
 RAZORPAY_API_SECRET = 'ikXS3mKARRR6XmzebdCYWM0r'
+# import environ
+# env = environ.Env()
+# RAZORPAY_KEY_ID = env("RAZORPAY_KEY_ID", default="rzp_test_l1HBtyvaOtuRLM")
+# RAZORPAY_KEY_SECRET = env("RAZORPAY_KEY_SECRET", default="ikXS3mKARRR6XmzebdCYWM0r")

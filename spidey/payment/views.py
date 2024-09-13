@@ -2,8 +2,7 @@ from django.shortcuts import render
 from .razorpay_integration import initiate_payment,client
 import razorpay
 
-def payment_view(request):
-   amount = 100  # Set the amount dynamically or based on your requirements
+def payment_view(request,amount = 69):
    order_id = initiate_payment(amount)
    context = {
        'order_id': order_id,
