@@ -20,6 +20,6 @@ from payment import urls as pays_url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pay',include(pays_url),name= "payurls"),
+    path('',include(pays_url),name= "payurls"),
     path('', include("base.urls")),
 ]
