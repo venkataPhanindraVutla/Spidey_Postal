@@ -5,13 +5,13 @@ class Stamp(models.Model):
     image_url = models.CharField(max_length=500)
     postal_circle = models.CharField(max_length=255)
     description = models.TextField()
-    price = models.DecimalField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     year = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     
     
-class Order(models.model):
-    stamp = models.ForeignKey(Stamp)
+class Order(models.Model):
+    stamp = models.ForeignKey(Stamp, blank=True, on_delete=models.CASCADE)
     status = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True) 
