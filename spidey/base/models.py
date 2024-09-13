@@ -10,7 +10,7 @@ class Stamp(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     
     
-class Order(models.model):
+class Order(models.Model):
     stamp = models.ForeignKey(Stamp)
     status = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)

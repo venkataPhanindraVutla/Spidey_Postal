@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base',
-    'users'
+    'users',
+    'payment'
 ]
 
 MIDDLEWARE = [
@@ -58,6 +59,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR / 'templates',
+            BASE_DIR /'payment/templates',
             ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -125,3 +127,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+RAZORPAY_API_KEY = 'rzp_test_l1HBtyvaOtuRLM'
+RAZORPAY_API_SECRET = 'ikXS3mKARRR6XmzebdCYWM0r'
