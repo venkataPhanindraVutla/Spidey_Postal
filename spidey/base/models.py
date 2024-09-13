@@ -11,7 +11,7 @@ class Stamp(models.Model):
     
     
 class Order(models.Model):
-    stamp = models.ForeignKey(Stamp)
+    stamp = models.ForeignKey(Stamp, blank=True, on_delete=models.CASCADE)
     status = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True) 
