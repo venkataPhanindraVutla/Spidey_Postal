@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from .settings import BASE_DIR
 from payment import urls as pays_url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include(pays_url),name= "payurls")
+    path('pay',include(pays_url),name= "payurls"),
+    path('', include("base.urls")),
 ]
