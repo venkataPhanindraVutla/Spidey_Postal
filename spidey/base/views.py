@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Stamp
 from django.db.models import Q
-from .models import Stamp
 
 # Create your views here.
 
@@ -12,6 +11,9 @@ def home(request):
         'recent_stamps': recent_stamps,
         'popular_stamps': popular_stamps
     })
+
+def login(request):
+    return render(request, 'login.html')
 
 def stamps(request):
     q = request.GET.get('q', '')

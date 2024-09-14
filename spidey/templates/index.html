@@ -51,7 +51,7 @@
     <div class="header-top">
       <div class="container">
 
-        <a href="#" class="logo">
+        <a href="{% url 'stamps' %}" class="logo">
           <h3>Spidey-Stamps</h3>
         </a>
 
@@ -74,7 +74,7 @@
           </button>
 
           <button class="header-action-btn" aria-label="user" title="User">
-            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            <a href="{% url 'login' %}"><ion-icon name="person-outline" aria-hidden="true"></ion-icon></a>
           </button>
 
         </div>
@@ -102,11 +102,11 @@
           <ul class="navbar-list">
 
             <li>
-              <a href="#" class="navbar-link">Home</a>
+              <a href="{% url 'home' %}" class="navbar-link">Home</a>
             </li>
 
             <li>
-              <a href="#" class="navbar-link">Shop</a>
+              <a href="{% url 'stamps' %}" class="navbar-link">Shop</a>
             </li>
 
             <li>
@@ -206,7 +206,7 @@
                 <div>
                   <h3 class="h3 card-title">Free Shipping</h3>
 
-                  <p class="card-text">Order over $100</p>
+                  <p class="card-text">Order over Rs.500/-</p>
                 </div>
 
               </div>
@@ -688,33 +688,7 @@
 
         </ul>
 
-        <ul class="footer-list">
 
-          <li>
-            <p class="footer-list-title">Services</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Grooming</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Positive Dog Training</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Veterinary Services</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Insurance</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Book Writing</a>
-          </li>
-
-        </ul>
 
       </div>
     </div>
